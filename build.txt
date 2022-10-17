@@ -1,0 +1,3 @@
+displayName = Kmod
+author = KirTrey
+version = 0.1
