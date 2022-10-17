@@ -14,9 +14,16 @@ namespace Kmod
             RecipeGroup group = new RecipeGroup(() => Lang.misc[37] + " Corrupted wood", new int[] //Any Wood - название группы
            {
                 ItemID.Ebonwood,
-                ItemID.SpookyWood,
+                ItemID.Shadewood,
             });
             RecipeGroup.RegisterGroup("CorruptedWood", group);
+
+            RecipeGroup g = new RecipeGroup(() => Lang.misc[37] + " Corrupted bar", new int[]
+            {
+                ItemID.DemoniteBar,
+                ItemID.CrimtaneBar,
+            });
+            RecipeGroup.RegisterGroup("CorruptedBar", g);
         }
     
     }

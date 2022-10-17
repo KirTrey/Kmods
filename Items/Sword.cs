@@ -10,7 +10,7 @@ namespace Kmod.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("ShadowSword"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			DisplayName.SetDefault("ShadowSword"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
 			Tooltip.SetDefault("This is a basic sword.");
 
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -18,7 +18,7 @@ namespace Kmod.Items
 
 		public override void SetDefaults()
 		{
-			Item.damage = 38;
+			Item.damage = 25;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 40;
 			Item.height = 40;
@@ -37,15 +37,10 @@ namespace Kmod.Items
 		public override void AddRecipes()
 		{
 			CreateRecipe(1)
-				.AddRecipeGroup("CorruptedWood", 10)
+				.AddIngredient(ItemID.Ebonwood, 25)
 				.AddIngredient(ItemID.DemoniteBar, 10)
-				.AddTile(TileID.WorkBenches)
-				.Register();
-
-			CreateRecipe(2)
-				.AddRecipeGroup("CorruptedWood", 10)
-				.AddIngredient(ItemID.CrimtaneBar, 10)
-				.AddTile(TileID.WorkBenches)
+				.AddIngredient(ItemID.LightsBane, 1)
+				.AddTile(TileID.DemonAltar)
 				.Register();
 
 		}

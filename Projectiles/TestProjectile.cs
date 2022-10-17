@@ -23,7 +23,7 @@ namespace Kmod.Projectiles
             Projectile.aiStyle = 0;
             Projectile.friendly = true;
             Projectile.hostile = false;
-            Projectile.penetrate = 3;
+            Projectile.penetrate = 5;
             Projectile.timeLeft = 600;
             Projectile.light = 0.25f;
             Projectile.ignoreWater = false;
@@ -32,7 +32,7 @@ namespace Kmod.Projectiles
 
         public override void AI()
         {
-            int dust = Dust.NewDust(Projectile.Center, 1, 1, DustID.Crimslime, 0f, 0f, 0, default, 1f);
+            int dust = Dust.NewDust(Projectile.Center, 1, 1, DustID.Corruption, 0f, 0f, 0, default, 1f);
             Main.dust[dust].noGravity = true;
             Main.dust[dust].velocity *= 0.3f;
 
